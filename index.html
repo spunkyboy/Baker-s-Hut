@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <title>Baker's Hut</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://kit.fontawesome.com/5d07f027c2.js" crossorigin="anonymous"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Slabo+27px&display=swap" rel="stylesheet">
+  
+  </head>
+  
+<body>
+<main class="baker-wrapper">
+  <section class="bakery-section"> 
+    <div class="grid-baker"><h1>Baker's</h1></div>
+    <div class="grid-baker"><img src="images/bakery.webp" alt="bakery image"></div>
+    <div class="grid-baker"><p>Site under maintaince</p></div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const bakerySection = document.querySelector('.bakery-section');
+  
+  // Add the "visible" class after the page loads
+  setTimeout(() => {
+    bakerySection.classList.add('visible');
+  }, 100);  // Small delay for the transition effect to show up
+});
+
+</script>
+</body>
+</html>

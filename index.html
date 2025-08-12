@@ -1,39 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" ">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Baker's Hut - Freshly baked goods, daily specials, and warm service." />
     <title>Baker's Hut</title>
-    <link rel="icon" type="image/x-icon" href="images/icon.jpg">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <script src="https://kit.fontawesome.com/5d07f027c2.js" crossorigin="anonymous"></script> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Slabo+27px&display=swap" rel="stylesheet">
-  
+    <link rel="icon" type="image/x-icon" href="images/icon.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/5d07f027c2.js" crossorigin="anonymous"></script>
   </head>
-  
-<body>
-<main class="baker-wrapper">
-  <section class="bakery-section"> 
-    <div class="grid-baker"><h1>Baker's</h1></div>
-    <div class="grid-baker"><img src="images/bakery.webp" alt="bakery image"></div>
-    <div class="grid-baker"><p>Site under maintaince</p></div>
-  </section>
-</main>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="#home" class="brand" aria-label="Baker's Hut Home">Baker's Hut</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
+          <span class="hamburger" aria-hidden="true"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav id="primary-navigation" class="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a class="nav-link active" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-  const bakerySection = document.querySelector('.bakery-section');
-  
-  // Add the "visible" class after the page loads
-  setTimeout(() => {
-    bakerySection.classList.add('visible');
-  }, 100);  // Small delay for the transition effect to show up
-});
+    <main id="home" class="main-content">
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Freshly Baked, Daily</h1>
+          <p>From artisan breads to sweet pastries — crafted with love every morning.</p>
+          <div class="hero-cta">
+            <a href="#features" class="btn btn-primary">Explore Menu</a>
+            <a href="#contact" class="btn btn-outline">Visit Us</a>
+          </div>
+        </div>
+      </section>
 
-</script>
-</body>
+      <section id="features" class="section features">
+        <div class="container">
+          <header class="section-header">
+            <h2>What We Do Best</h2>
+            <p>Our signature offerings, made with the finest ingredients.</p>
+          </header>
+          <div class="features-grid">
+            <article class="card">
+              <div class="card-icon"><i class="fa-solid fa-bread-slice" aria-hidden="true"></i></div>
+              <h3>Artisan Breads</h3>
+              <p>Slow-fermented loaves with a crisp crust and tender crumb.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i></div>
+              <h3>Custom Cakes</h3>
+              <p>Celebration cakes tailored to your taste and occasion.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></div>
+              <h3>Coffee & Pastries</h3>
+              <p>Pair your morning brew with flaky croissants and tarts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-grid">
+          <div>
+            <header class="section-header left">
+              <h2>Get In Touch</h2>
+              <p>We'd love to hear from you. Reach us or drop by our store.</p>
+            </header>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 123 Baker Street, Sweet City</li>
+              <li><i class="fa-solid fa-phone" aria-hidden="true"></i> (555) 012-3456</li>
+              <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> hello@bakershut.example</li>
+            </ul>
+          </div>
+          <form class="contact-form" aria-label="Contact form" onsubmit="return false;">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <p>&copy; <span id="year"></span> Baker's Hut. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script defer src="javascript/main.js"></script>
+  </body>
 </html>
